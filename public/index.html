@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thrif Me Up — Curated Thrift & Vintage Fashion in Pakistan</title>
+<meta name="description" content="Thrif Me Up is Pakistan's boutique thrift store — hand-picked pre-loved clothing, cute home decor and vintage finds. Shop sustainable style, delivered nationwide.">
+<meta name="theme-color" content="#211F1C">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Thrif Me Up — Curated Thrift & Vintage Fashion">
+<meta property="og:description" content="Hand-picked pre-loved clothing & home decor, delivered across Pakistan.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/placeholders.css">
+<link rel="stylesheet" href="/css/cursor-glow.css">
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ Announcement bar ============ -->
+<div class="announce-bar">Nationwide delivery across Pakistan · Bank &amp; online transfer only</div>
+
+<!-- ============ Navbar ============ -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" class="active">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="/login.html" class="nav-icon-btn" aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+      <a href="/wishlist.html" class="nav-icon-btn" aria-label="Wishlist">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      </a>
+      <a href="/cart.html" class="nav-icon-btn" aria-label="Cart, 2 items">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <span class="nav-badge" style="display:none;">0</span>
+      </a>
+      <button class="nav-icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Mobile menu ============ -->
+<div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></span>
+    <button class="mobile-menu-close nav-icon-btn" aria-label="Close menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/shop.html">Shop</a></li>
+    <li><a href="/categories.html">Categories</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</div>
+
+<main>
+
+<!-- ============ Hero — full-bleed 3D showcase ============ -->
+<section class="hero hero--full" id="hero">
+  <div class="hero-bg" id="heroBg" data-hero-carousel>
+    <div class="hero-slide is-active">
+      <img src="/images/products/cream-floral-cardigan.png" alt="Cream cardigan with hand-embroidered flowers">
+    </div>
+    <div class="hero-slide">
+      <img src="/images/products/blue-floral-cardigan.png" alt="Blue daisy cardigan">
+    </div>
+    <div class="hero-slide">
+      <img src="/images/products/black-floral-cardigan.png" alt="Black daisy cropped cardigan">
+    </div>
+    <div class="hero-scrim" aria-hidden="true"></div>
+
+    <button class="carousel-arrow prev" aria-label="Previous image">‹</button>
+    <button class="carousel-arrow next" aria-label="Next image">›</button>
+    <div class="carousel-dots">
+      <span class="dot is-active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="container hero-inner hero-inner--overlay">
+    <div class="hero-copy hero-copy--on-image reveal">
+      <p class="eyebrow">Pre-loved · Pre-approved</p>
+      <h1>One-of-one finds, worn in&nbsp;&mdash;<br>never worn out.</h1>
+      <p class="lede">Every piece at Thrif Me Up is hand-picked, quality-checked, and priced to make secondhand feel like the smarter first choice — not the backup plan.</p>
+      <div class="hero-cta-row">
+        <a href="/shop.html" class="btn btn-primary">Shop the Edit</a>
+        <a href="/about.html" class="btn btn-outline btn-outline--on-image">Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>500+</strong><span>Pieces Rehomed</span></div>
+        <div class="hero-stat"><strong>4.9★</strong><span>Buyer Rating</span></div>
+        <div class="hero-stat"><strong>PK</strong><span>Nationwide Delivery</span></div>
+      </div>
+    </div>
+  </div>
+
+  <span class="hero-scroll-cue" aria-hidden="true">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </span>
+</section>
+
+<!-- ============ Featured Categories ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Shop by Category</p>
+      <h2>Find your next favorite</h2>
+    </div>
+    <div class="cat-grid">
+      <a href="/categories.html?c=sweaters" class="cat-card reveal">
+        <div class="cat-visual ph-sweater-stripe"></div>
+        <div class="cat-card-label"><h4>Sweaters</h4><span>48 pieces</span></div>
+      </a>
+      <a href="/categories.html?c=outerwear" class="cat-card reveal" data-delay="80">
+        <div class="cat-visual ph-denim"></div>
+        <div class="cat-card-label"><h4>Outerwear</h4><span>22 pieces</span></div>
+      </a>
+      <a href="/categories.html?c=dresses" class="cat-card reveal" data-delay="160">
+        <div class="cat-visual ph-blush"></div>
+        <div class="cat-card-label"><h4>Dresses</h4><span>31 pieces</span></div>
+      </a>
+      <a href="/categories.html?c=decor" class="cat-card reveal" data-delay="240">
+        <div class="cat-visual ph-cream-plain"></div>
+        <div class="cat-card-label"><h4>Home Decor</h4><span>19 pieces</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Featured Products ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <p class="eyebrow">Curator's Picks</p>
+        <h2>Featured Finds</h2>
+      </div>
+      <a href="/shop.html" class="btn-ghost">View all products →</a>
+    </div>
+
+    <div class="product-grid" id="featured-products-grid">
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="tag tag--rust">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+          <div class="product-visual ph-rust-knit"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info">
+          <p class="p-category">Sweaters</p>
+          <h5>Rust Ribbed Knit Sweater</h5>
+          <div class="p-price"><span class="now">Rs. 1,450</span><span class="was">Rs. 2,800</span></div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-delay="80">
+        <div class="product-media">
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+          <div class="product-visual ph-mint-stripe"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info">
+          <p class="p-category">Sweaters</p>
+          <h5>Mint Striped Pullover</h5>
+          <div class="p-price"><span class="now">Rs. 1,200</span></div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-delay="160">
+        <div class="product-media">
+          <span class="tag tag--forest">Rare Find</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+          <div class="product-visual ph-charcoal-floral"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info">
+          <p class="p-category">Tops</p>
+          <h5>Charcoal Floral Print Top</h5>
+          <div class="p-price"><span class="now">Rs. 980</span></div>
+        </div>
+      </article>
+
+      <article class="product-card reveal" data-delay="240">
+        <div class="product-media">
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+          <div class="product-visual ph-mustard"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info">
+          <p class="p-category">Accessories</p>
+          <h5>Mustard Knit Gloves</h5>
+          <div class="p-price"><span class="now">Rs. 650</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ New Arrivals / Best Sellers (tabbed) ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <p class="eyebrow">Fresh In</p>
+        <h2>New Arrivals &amp; Best Sellers</h2>
+      </div>
+      <div class="tab-row" data-tab-group="picks">
+        <button class="tab-btn is-active" data-tab="new">New Arrivals</button>
+        <button class="tab-btn" data-tab="best">Best Sellers</button>
+      </div>
+    </div>
+
+    <div class="product-grid" data-tab-panel="picks" data-tab="new">
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="tag tag--rust">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-forest"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Sweaters</p><h5>Forest Green Striped Knit</h5><div class="p-price"><span class="now">Rs. 1,600</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="80">
+        <div class="product-media">
+          <span class="tag tag--rust">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-checker"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Sweaters</p><h5>Pink Checkerboard Sweater</h5><div class="p-price"><span class="now">Rs. 1,750</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="160">
+        <div class="product-media">
+          <span class="tag tag--rust">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-denim"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Outerwear</p><h5>Silver Grey Bomber Jacket</h5><div class="p-price"><span class="now">Rs. 2,400</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="240">
+        <div class="product-media">
+          <span class="tag tag--rust">New</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-blush"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Tops</p><h5>Coral Crewneck Sweater</h5><div class="p-price"><span class="now">Rs. 1,350</span></div></div>
+      </article>
+    </div>
+
+    <div class="product-grid" data-tab-panel="picks" data-tab="best" hidden>
+      <article class="product-card reveal">
+        <div class="product-media">
+          <span class="tag tag--forest">Bestseller</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-sweater-stripe"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Sweaters</p><h5>Classic Black &amp; Cream Stripe</h5><div class="p-price"><span class="now">Rs. 1,500</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="80">
+        <div class="product-media">
+          <span class="tag tag--forest">Bestseller</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-cream-plain"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Home Decor</p><h5>Handmade Ceramic Plate</h5><div class="p-price"><span class="now">Rs. 850</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="160">
+        <div class="product-media">
+          <span class="tag tag--forest">Bestseller</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-rust-knit"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Home Decor</p><h5>Terracotta Mug Set</h5><div class="p-price"><span class="now">Rs. 700</span></div></div>
+      </article>
+      <article class="product-card reveal" data-delay="240">
+        <div class="product-media">
+          <span class="tag tag--forest">Bestseller</span>
+          <button class="wishlist-btn" aria-label="Add to wishlist" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <div class="product-visual ph-mustard"></div>
+          <span class="quick-add">Quick Add</span>
+        </div>
+        <div class="product-info"><p class="p-category">Accessories</p><h5>Mustard Wool Gloves</h5><div class="p-price"><span class="now">Rs. 650</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Why Choose Us ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Thrif Me Up Difference</p>
+      <h2>Why shop with us</h2>
+    </div>
+    <div class="value-grid">
+      <div class="value-item reveal">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h5>Quality Checked</h5>
+        <p>Every piece is inspected for fabric, stitching, and wear before it reaches you.</p>
+      </div>
+      <div class="value-item reveal" data-delay="80">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 3v18h18"/><path d="M18 8l-5 5-4-4-4 4"/></svg></div>
+        <h5>Honest Pricing</h5>
+        <p>Boutique quality, thrift prices — no markup games, ever.</p>
+      </div>
+      <div class="value-item reveal" data-delay="160">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg></div>
+        <h5>Nationwide Delivery</h5>
+        <p>Rs. 250 flat delivery charge to anywhere in Pakistan.</p>
+      </div>
+      <div class="value-item reveal" data-delay="240">
+        <div class="value-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 2v10l7-3"/></svg></div>
+        <h5>Sustainable Style</h5>
+        <p>Every purchase keeps a garment out of landfill and in rotation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How It Works ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Simple by Design</p>
+      <h2>How it works</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-item reveal">
+        <h5>Browse the Edit</h5>
+        <p>Filter by category, size, or price to find pieces that fit your style.</p>
+      </div>
+      <div class="step-item reveal" data-delay="80">
+        <h5>Reserve Your Piece</h5>
+        <p>Add to cart — since every item is one-of-one, we hold it for you at checkout.</p>
+      </div>
+      <div class="step-item reveal" data-delay="160">
+        <h5>Pay by Transfer</h5>
+        <p>Confirm your order with a quick bank or online transfer.</p>
+      </div>
+      <div class="step-item reveal" data-delay="240">
+        <h5>It Arrives</h5>
+        <p>Nationwide delivery for a flat Rs. 250, tracked door to door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Testimonials ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Loved By Customers</p>
+      <h2>What buyers are saying</h2>
+    </div>
+    <div class="testi-track">
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"The sweater looked even better in person. Fast delivery and it felt like a proper boutique package."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div><strong>Ayesha K.</strong><span>Lahore</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal" data-delay="80">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Found a jacket I'd never see in regular stores. Great condition, honestly priced."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">H</div>
+          <div><strong>Hassan M.</strong><span>Islamabad</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal" data-delay="160">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">"Been ordering from their Instagram for months — the website makes it even easier to shop."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div><strong>Sana R.</strong><span>Karachi</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Instagram Gallery ============ -->
+<section class="section">
+  <div class="container">
+    <div class="insta-head reveal">
+      <div>
+        <p class="eyebrow">Follow Along</p>
+        <h2>@thriftmeup.pk</h2>
+      </div>
+      <a href="https://www.instagram.com/thriftmeup.pk/" target="_blank" rel="noopener" class="btn btn-outline">Follow on Instagram</a>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item reveal"><div class="cat-visual ph-sweater-stripe"></div></div>
+      <div class="insta-item reveal" data-delay="40"><div class="cat-visual ph-rust-knit"></div></div>
+      <div class="insta-item reveal" data-delay="80"><div class="cat-visual ph-mint-stripe"></div></div>
+      <div class="insta-item reveal" data-delay="120"><div class="cat-visual ph-mustard"></div></div>
+      <div class="insta-item reveal" data-delay="160"><div class="cat-visual ph-blush"></div></div>
+      <div class="insta-item reveal" data-delay="200"><div class="cat-visual ph-charcoal-floral"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Newsletter ============ -->
+<section class="section">
+  <div class="container">
+    <div class="newsletter-box reveal">
+      <p class="eyebrow">Stay In The Loop</p>
+      <h2>Get first pick of new drops</h2>
+      <p>New pieces go live weekly — subscribe so you're never scrolling in after they're gone.</p>
+      <form class="newsletter-form" novalidate>
+        <label for="newsletter-email" class="visually-hidden">Email address</label>
+        <input id="newsletter-email" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="form-msg" role="status"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Contact Section ============ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Get In Touch</p>
+        <h2 style="margin-bottom: var(--sp-8);">Questions before you order?</h2>
+
+        <div class="contact-info-item">
+          <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2z"/></svg></div>
+          <div><h5>WhatsApp / Call</h5><p>Message us for quick sizing or order help.</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><h5>Email</h5><p>hello@thriftmeup.pk</p></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h5>Delivers Nationwide</h5><p>Flat Rs. 250 shipping, all over Pakistan.</p></div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" data-delay="120" novalidate>
+        <div class="field">
+          <label for="c-name">Name</label>
+          <input id="c-name" type="text" required>
+          <span class="error-text"></span>
+        </div>
+        <div class="field">
+          <label for="c-email">Email</label>
+          <input id="c-email" type="email" required>
+          <span class="error-text"></span>
+        </div>
+        <div class="field">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" rows="4" required></textarea>
+          <span class="error-text"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></span>
+        <p>Curated thrift &amp; vintage fashion, hand-picked for the fashion-conscious, budget-savvy, and sustainably minded. Based in Pakistan, delivering nationwide.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/thriftmeup.pk/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h6>Shop</h6>
+        <ul>
+          <li><a href="/shop.html">All Products</a></li>
+          <li><a href="/categories.html">Categories</a></li>
+          <li><a href="/wishlist.html">Wishlist</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Support</h6>
+        <ul>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/contact.html">Contact Us</a></li>
+          <li><a href="/dashboard.html">Track Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Thrif Me Up. All rights reserved.</span>
+      <span>Made with care in Pakistan 🇵🇰</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="/js/main.js"></script>
+<script src="/js/cursor-glow.js"></script>
+<script src="/js/hero-3d.js"></script>
+<script src="/js/cart-utils.js"></script>
+<script src="/js/wishlist-utils.js"></script>
+<script src="/js/hero-carousel.js"></script>
+<script src="/js/home-live.js"></script>
+<script src="/js/tilt-cards.js"></script>
+</body>
+</html>

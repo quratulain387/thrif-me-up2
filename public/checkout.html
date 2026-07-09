@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Thrif Me Up</title>
+<meta name="theme-color" content="#EAD0C3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/placeholders.css">
+<link rel="stylesheet" href="/css/cart.css">
+<link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+
+<header class="navbar is-scrolled">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="/cart.html" class="nav-icon-btn" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div style="padding-top: var(--sp-16);">
+    <p class="eyebrow">Step 2 of 2</p>
+    <h1 style="font-size: var(--fs-h3);">Checkout</h1>
+  </div>
+
+  <div class="checkout-layout">
+    <div>
+      <p class="checkout-error-banner" id="checkout-error-banner"></p>
+
+      <form id="checkout-form">
+        <div class="checkout-section">
+          <h4><span class="step-num">1</span> Shipping Address</h4>
+          <div class="checkout-form-grid two-col">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" type="text" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="03XX-XXXXXXX" required>
+            </div>
+          </div>
+          <div class="checkout-form-grid" style="margin-top: var(--sp-4);">
+            <div class="field">
+              <label for="street">Street Address</label>
+              <input id="street" type="text" required>
+            </div>
+          </div>
+          <div class="checkout-form-grid two-col" style="margin-top: var(--sp-4);">
+            <div class="field">
+              <label for="city">City</label>
+              <input id="city" type="text" required>
+            </div>
+            <div class="field">
+              <label for="postalCode">Postal Code (optional)</label>
+              <input id="postalCode" type="text">
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-section">
+          <h4><span class="step-num">2</span> Payment Method</h4>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Bank Transfer" checked>
+            <div><strong>Bank Transfer</strong><span>Transfer to our account, then we confirm your order</span></div>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="Online Transfer">
+            <div><strong>Online Transfer (Easypaisa/JazzCash)</strong><span>Send payment via mobile wallet</span></div>
+          </label>
+          <div class="bank-details">
+            <p><strong>Bank:</strong> Meezan Bank</p>
+            <p><strong>Account Title:</strong> Thrif Me Up</p>
+            <p><strong>Account Number:</strong> 0123-4567890-1</p>
+            <p style="color: var(--text-muted-on-light); margin-top: var(--sp-3);">We'll confirm your order via WhatsApp/call once payment is received.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary place-order-btn" id="place-order-btn">Place Order</button>
+      </form>
+    </div>
+
+    <aside class="checkout-summary">
+      <h4>Order Summary</h4>
+      <div id="checkout-summary-items"></div>
+      <div class="summary-row" style="margin-top: var(--sp-4);"><span>Subtotal</span><span id="co-subtotal">Rs. 0</span></div>
+      <div class="summary-row"><span>Delivery</span><span>Rs. 250</span></div>
+      <div class="summary-row total"><span>Total</span><span id="co-total">Rs. 0</span></div>
+    </aside>
+  </div>
+</main>
+
+<script src="/js/cart-utils.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

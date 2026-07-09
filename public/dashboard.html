@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — Thrif Me Up</title>
+<meta name="theme-color" content="#211F1C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/home.css">
+<style>
+  .dash-shell { max-width: 720px; margin: 0 auto; padding: var(--sp-24) var(--sp-6); }
+  .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-12); }
+  .dash-card { background: var(--surface); border: 1px solid var(--border-on-light); border-radius: var(--radius-md); padding: var(--sp-8); margin-bottom: var(--sp-6); }
+  .dash-row { display: flex; justify-content: space-between; padding: var(--sp-3) 0; border-bottom: 1px solid var(--border-on-light); font-size: 0.95rem; }
+  .dash-row:last-child { border-bottom: none; }
+  .dash-row span:first-child { color: var(--text-muted-on-light); }
+  .dash-empty { text-align: center; padding: var(--sp-16) 0; color: var(--text-muted-on-light); }
+</style>
+</head>
+<body>
+
+<header class="navbar is-scrolled">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/dashboard.html" class="active">My Account</a>
+    </nav>
+    <button class="btn btn-outline" id="logout-btn">Log Out</button>
+  </div>
+</header>
+
+<main class="dash-shell" id="dash-content">
+  <div class="dash-empty">Loading your account…</div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const content = document.getElementById('dash-content');
+  const logoutBtn = document.getElementById('logout-btn');
+
+  try {
+    const res = await fetch('/api/auth/profile', { credentials: 'include' });
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data.message || 'Please log in to view your account.');
+
+    const u = data.user;
+    content.innerHTML = `
+      <div class="dash-header">
+        <div>
+          <p class="eyebrow">My Account</p>
+          <h1 style="font-size: var(--fs-h3);">Welcome, ${u.name.split(' ')[0]}</h1>
+        </div>
+        ${u.role === 'admin' ? `<a href="/admin.html" class="btn btn-primary">Go to Admin Dashboard</a>` : ''}
+      </div>
+      <div class="dash-card">
+        <h4 style="margin-bottom: var(--sp-4);">Profile</h4>
+        <div class="dash-row"><span>Name</span><span>${u.name}</span></div>
+        <div class="dash-row"><span>Email</span><span>${u.email}</span></div>
+        <div class="dash-row"><span>Phone</span><span>${u.phone || 'Not added yet'}</span></div>
+        <div class="dash-row"><span>Account type</span><span>${u.role}</span></div>
+      </div>
+      <div class="dash-card">
+        <h4 style="margin-bottom: var(--sp-4);">Orders</h4>
+        <p style="color: var(--text-muted-on-light); font-size: 0.9rem;">No orders yet — <a href="/shop.html" style="color: var(--primary);">start shopping</a>.</p>
+      </div>
+    `;
+  } catch (err) {
+    content.innerHTML = `<div class="dash-empty"><p>${err.message}</p><br><a href="/login.html" class="btn btn-primary">Log In</a></div>`;
+  }
+
+  logoutBtn.addEventListener('click', async () => {
+    await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
+    window.location.href = '/login.html';
+  });
+});
+</script>
+</body>
+</html>

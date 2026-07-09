@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Thrif Me Up</title>
+<meta name="description" content="Log in to your Thrif Me Up account to shop, track orders, and view your wishlist.">
+<meta name="theme-color" content="#211F1C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/placeholders.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="bg-yarn">
+
+<div class="container auth-shell" style="grid-template-columns: 1fr; justify-items: center;">
+
+  <div class="auth-card">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+    <h1>Welcome back</h1>
+    <p class="sub">Log in to pick up right where you left off.</p>
+
+    <p class="auth-alert" role="alert"></p>
+
+    <form class="auth-form" data-auth-form="login" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="password-field">
+          <input id="password" type="password" autocomplete="current-password" minlength="6" required>
+          <button type="button" class="password-toggle">Show</button>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log In</button>
+    </form>
+
+    <p class="auth-switch">New to Thrif Me Up? <a href="/register.html">Create an account</a></p>
+  </div>
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

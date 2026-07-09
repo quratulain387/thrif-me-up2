@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account — Thrif Me Up</title>
+<meta name="description" content="Create your Thrif Me Up account to shop, track orders, and save your wishlist.">
+<meta name="theme-color" content="#211F1C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/placeholders.css">
+<link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+
+<div class="container auth-shell" style="grid-template-columns: 1fr; justify-items: center;">
+
+  <div class="auth-card">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+    <h1>Create your account</h1>
+    <p class="sub">Join Thrif Me Up to save favorites, track orders, and shop new drops first.</p>
+
+    <p class="auth-alert" role="alert"></p>
+
+    <form class="auth-form" data-auth-form="register" novalidate>
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" type="tel" autocomplete="tel" placeholder="03XX-XXXXXXX">
+      </div>
+      <div class="field-row two-col">
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-field">
+            <input id="password" type="password" autocomplete="new-password" minlength="6" required>
+            <button type="button" class="password-toggle">Show</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <div class="password-field">
+            <input id="confirmPassword" type="password" autocomplete="new-password" minlength="6" required>
+            <button type="button" class="password-toggle">Show</button>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+    </form>
+
+    <p class="auth-switch">Already have an account? <a href="/login.html">Log in</a></p>
+  </div>
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

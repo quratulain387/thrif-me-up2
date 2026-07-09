@@ -1,0 +1,61 @@
+/* ============================================================
+   VISUAL PLACEHOLDERS
+   Textile-inspired gradients/patterns in the brand's real palette
+   (rust, mustard, forest, dusty pink, mint, black & cream stripes)
+   until real product photography is dropped in. Swap any .ph-*
+   element's background with an <img> when real photos are ready —
+   see the comment block at the bottom of this file.
+   ============================================================ */
+
+.cat-visual, .product-visual {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.ph-sweater-stripe {
+  background: repeating-linear-gradient(180deg, #F3EEE4 0 22px, #211F1C 22px 40px);
+}
+.ph-rust-knit {
+  background: linear-gradient(160deg, #C1694F 0%, #9C4A2C 100%);
+}
+.ph-mustard {
+  background: linear-gradient(150deg, #E8BE6E 0%, #C1893A 100%);
+}
+.ph-forest {
+  background: linear-gradient(160deg, #5C6E4E 0%, #38452F 100%);
+}
+.ph-mint-stripe {
+  background: repeating-linear-gradient(180deg, #CFE0D6 0 18px, #8FAE9A 18px 32px);
+}
+.ph-blush {
+  background: linear-gradient(150deg, #E3C4BE 0%, #C99B92 100%);
+}
+.ph-charcoal-floral {
+  background: radial-gradient(circle at 30% 30%, #4A4A44 0 8px, transparent 9px) 0 0/40px 40px,
+              radial-gradient(circle at 70% 60%, #4A4A44 0 6px, transparent 7px) 0 0/40px 40px,
+              #211F1C;
+}
+.ph-cream-plain {
+  background: linear-gradient(160deg, #F3EEE4 0%, #E4DCC8 100%);
+}
+.ph-denim {
+  background: linear-gradient(160deg, #5D7285 0%, #3E4F5C 100%);
+}
+.ph-checker {
+  background:
+    linear-gradient(45deg, #C1694F 25%, transparent 25%) 0 0/24px 24px,
+    linear-gradient(-45deg, #C1694F 25%, transparent 25%) 0 0/24px 24px,
+    #211F1C;
+}
+
+/* ============================================================
+   HOW TO SWAP IN REAL PHOTOS LATER
+   Replace, e.g.:
+     <div class="product-visual ph-rust-knit"></div>
+   with:
+     <img class="product-visual" src="/images/products/rust-knit.jpg"
+          alt="Rust knit sweater" loading="lazy" width="400" height="500">
+   Keep the same wrapping element/classes so hover-zoom keeps working.
+   ============================================================ */

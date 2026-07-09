@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Thrif Me Up</title>
+<meta name="theme-color" content="#EAD0C3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/home.css">
+<style>
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--border-on-light); }
+  .faq-question {
+    width: 100%; text-align: left;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: var(--sp-6) 0;
+    font-family: var(--font-display); font-size: var(--fs-h5);
+  }
+  .faq-question svg { transition: transform 0.3s var(--ease); flex-shrink: 0; margin-left: var(--sp-4); }
+  .faq-item.is-open .faq-question svg { transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.35s var(--ease);
+    color: var(--text-muted-on-light);
+    line-height: 1.7;
+  }
+  .faq-answer p { padding-bottom: var(--sp-6); }
+</style>
+</head>
+<body>
+
+<header class="navbar is-scrolled">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container" style="padding-top: var(--sp-16); text-align:center;">
+    <p class="eyebrow">Need Help?</p>
+    <h1 style="font-size: var(--fs-h2);">Frequently Asked Questions</h1>
+  </div>
+
+  <section class="section">
+    <div class="container faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">How does sizing work for thrifted pieces?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-answer"><p>Every listing shows the exact size and condition of that specific piece. Since each item is one-of-one, we recommend checking measurements in the description or messaging us on WhatsApp before ordering if you're unsure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I pay for my order?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-answer"><p>We accept bank transfer and online transfer (Easypaisa/JazzCash). Bank details are shown at checkout, and your order is confirmed once payment is received.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How long does delivery take?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-answer"><p>Delivery is nationwide across Pakistan for a flat Rs. 250, typically arriving within 3-6 business days depending on your city.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I return or exchange an item?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-answer"><p>Since every piece is one-of-one and pre-loved, we describe condition as accurately as possible upfront. If an item arrives significantly different from its listing, message us within 24 hours of delivery and we'll make it right.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Where do your clothes come from?<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-answer"><p>We hand-select every piece for quality, style, and condition before it's listed — no bulk unsorted bales here. Each item is inspected and, where needed, cleaned before it reaches you.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 Thrif Me Up. All rights reserved.</span>
+      <span>Made with care in Pakistan 🇵🇰</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/cart-utils.js"></script>
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('is-open');
+
+    document.querySelectorAll('.faq-item.is-open').forEach(open => {
+      open.classList.remove('is-open');
+      open.querySelector('.faq-answer').style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      item.classList.add('is-open');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>

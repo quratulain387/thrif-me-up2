@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — Thrif Me Up</title>
+<meta name="theme-color" content="#EAD0C3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/home.css">
+<style>
+  .success-shell {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: var(--sp-24) var(--sp-6);
+    text-align: center;
+  }
+  .success-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(91,140,90,0.12);
+    color: var(--success);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto var(--sp-6);
+  }
+  .order-id-box {
+    background: var(--surface);
+    border: 1px solid var(--border-on-light);
+    border-radius: var(--radius-md);
+    padding: var(--sp-5);
+    margin: var(--sp-8) 0;
+    font-family: var(--font-display);
+    font-size: var(--fs-h5);
+  }
+  .success-actions { display: flex; gap: var(--sp-3); justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<header class="navbar is-scrolled">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo.png" alt="Thrif Me Up logo"><span>Thrif Me Up</span></a>
+  </div>
+</header>
+
+<main class="success-shell">
+  <div class="success-icon">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+  </div>
+  <p class="eyebrow">Order Placed</p>
+  <h1 style="font-size: var(--fs-h3);">Thank you for your order!</h1>
+  <p style="color: var(--text-muted-on-light); margin-top: var(--sp-3);">We've received your order and will confirm it shortly once payment is verified.</p>
+
+  <div class="order-id-box" id="order-id-box">Loading order details…</div>
+
+  <div class="success-actions">
+    <a href="/shop.html" class="btn btn-outline">Continue Shopping</a>
+    <a href="/dashboard.html" class="btn btn-primary">Track My Order</a>
+  </div>
+</main>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const orderId = params.get('id');
+  const box = document.getElementById('order-id-box');
+  if (orderId) {
+    box.innerHTML = `Order ID: <strong>#${orderId.slice(-8).toUpperCase()}</strong>`;
+  } else {
+    box.textContent = 'Order confirmation unavailable';
+  }
+</script>
+</body>
+</html>
